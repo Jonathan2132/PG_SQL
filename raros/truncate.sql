@@ -1,17 +1,17 @@
-El comando TRUNCATE en PostgreSQL se utiliza para eliminar todas las filas de una tabla de manera rápida y eficiente. A diferencia de DELETE, TRUNCATE no escanea las filas individuales y no activa los triggers asociados a la tabla. Esto lo hace mucho más rápido para tablas grandes, pero también significa que no se pueden realizar transacciones de forma granular con TRUNCATE.
+--El comando TRUNCATE en PostgreSQL se utiliza para eliminar todas las filas de una tabla de manera rápida y eficiente. A diferencia de DELETE, TRUNCATE no escanea las filas individuales y no activa los triggers asociados a la tabla. Esto lo hace mucho más rápido para tablas grandes, pero también significa que no se pueden realizar transacciones de forma granular con TRUNCATE.
 
-Aquí tienes la sintaxis básica para usar TRUNCATE en PostgreSQL:
+--Aquí tienes la sintaxis básica para usar TRUNCATE en PostgreSQL:
 
 sql
 Copy code
 TRUNCATE TABLE nombre_de_la_tabla;
-Si necesitas truncar múltiples tablas al mismo tiempo, puedes hacerlo listando todas las tablas separadas por comas:
+--Si necesitas truncar múltiples tablas al mismo tiempo, puedes hacerlo listando todas las tablas separadas por comas:
 
 sql
 Copy code
 TRUNCATE TABLE tabla1, tabla2, tabla3;
 Opciones Adicionales
-RESTART IDENTITY: Esta opción restablece los contadores de identidad (como las secuencias de las columnas SERIAL o BIGSERIAL) a sus valores iniciales. Si no se especifica, los contadores de identidad se mantienen.
+--RESTART IDENTITY: Esta opción restablece los contadores de identidad (como las secuencias de las columnas SERIAL o BIGSERIAL) a sus valores iniciales. Si no se especifica, los contadores de identidad se mantienen.
 
 sql
 Copy code
